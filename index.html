@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Rasters</title>
+
+    <!-- AVOID FAVICON ERROR-->
+    <link rel="shortcut icon" href="#">
+    <!-- CSS => Leaflet, FA, BS, sidebar, easy button
+    Leaflet sidebar => https://github.com/Turbo87/leaflet-sidebar
+    Leaflet Easy Buttons => https://github.com/CliffCloud/Leaflet.EasyButton
+    Leaflet Map Provider => https://github.com/leaflet-extras/leaflet-providers-->
+    <link rel="stylesheet" href="./plugins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="./plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="./plugins/font_awesome_5/css/all.css">
+    <link rel="stylesheet" href="./plugins/leaflet-sidebar.css">
+    <link rel="stylesheet" href="./plugins/leaflet-easy-button.css">
+
+    <!-- JS => leaflet, jQuery, sidebar, easy button-->
+    <script src="./plugins/leaflet/leaflet-src.js"></script>
+    <script src="./plugins/jquery.min.js"></script>
+    <script src="./plugins/leaflet-sidebar.js"></script>
+    <script src="./plugins/leaflet-easy-button.js"></script>
+    <script src="./plugins/leaflet-side-by-side.min.js"></script>
+    
+    <!-- Own Css style -->
+    <link rel="stylesheet" href="./public/css/map.css">
+    <link rel="stylesheet" href="./public/css/sidebar.css">
+
+
+
+</head>
+<body>
+   
+    
+    <div id="sideBar">
+        <div id="sideBarHeader">
+            <div id="headers">
+                <h4>Historical</h4>
+                <h4>Ortophotos</h4>
+                <h4>Bern</h4>
+                <div id="divChangeContent">
+                    <button id="changeContent" class="btn btn-light btn-block" value="compareOrtos">Click To Select One ortophoto</button>
+                </div>
+            </div>
+        </div>
+        <div id="sideBarMain">
+            <div id="selectOrto">
+                <div id="fullViewSelectOrto" class="hide">
+                    <h5 class="selectOrtoHeader">Select Full View Ortophoto</h5>
+                    <div class="row">
+                        <div class="col full">
+                            <button class="btn btn-light btn-block" value="luftbild_1999">1999</button>
+                            <button class="btn btn-light btn-block" value="luftbild_2008">2008</button>
+                            <button class="btn btn-light btn-block" value="luftbild_2016">2016</button>
+                        </div>
+                        <div class="col full">
+                            <button class="btn btn-light btn-block" value="luftbild_2004">2004</button>
+                            <button class="btn btn-light btn-block" value="luftbild_2012">2012</button>
+                            <button class="btn btn-light btn-block active" value="luftbild_2020">2020</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="compareOrtos">
+                    <div id="rightSelectOrto ">
+                        <h5 class="selectOrtoHeader">Select Right OrtoPhoto</h5>
+                        <div class="row">
+                            <div class="col right">
+                                <button class="btn btn-light btn-block" value="luftbild_1999">1999</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2008">2008</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2016">2016</button>
+                                
+                            </div>
+                            <div class="col right">
+                                <button class="btn btn-light btn-block" value="luftbild_2004">2004</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2012">2012</button>
+                                <button class="btn btn-light btn-block active" value="luftbild_2020">2020</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="leftSelectOrto">
+                        <h5 class="selectOrtoHeader">Select Left OrtoPhoto</h5>
+                        <div class="row">
+                            <div class="col left">
+                                <button class="btn btn-light btn-block active" value="luftbild_1999">1999</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2008">2008</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2016">2016</button>
+                            </div>
+                            <div class="col left">
+                                <button class="btn btn-light btn-block" value="luftbild_2004">2004</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2012">2012</button>
+                                <button class="btn btn-light btn-block" value="luftbild_2020">2020</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="attribution">
+                    Created With <a href="https://leafletjs.com/">Leaflet</a> | <a href="https://map.bern.ch/wms/OpenData/proxy.php?request=GetCapabilities">map.bern.ch</a> - WMS (Open Data)
+                </div>
+            </div>
+            <div id="closeSidebar">
+                <span id="closeIcon"><i class="fas fa-chevron-left"></i></span>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="fullOrtoInfo" class="infoOrtoStyle hide">2020</div>
+    <div id="leftOrtoInfo" class="infoOrtoStyle">1999</div>
+    <div id="rightOrtoInfo" class="infoOrtoStyle">2020</div>
+    <div id="mapView">
+        
+    </div>
+        
+    <!-- Own Scripts -->
+    <script src="./public/js/initial.js"></script>
+    <script src="./public/js/map.js"></script>
+    <script src="./public/js/functions.js"></script>
+</body>
+</html>

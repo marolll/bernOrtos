@@ -1,0 +1,15 @@
+* DO ANALYSIS MAYBE WITH PNG, CAUSE WMS LOADED VERY SLOWLY
+* Corner names dont shown, if sidebar is active!!
+* FIND AND MAYBE USE MORE BERN OPENDATA
+* Add Print Functionality
+* FOR FUTURE - COMPARE ANY WMS
+* RESPONSIVE FOR MOBILES!!!
+
+
+
+
+TIPS
+Check if control  is in the map => console.log(ctlSideBySide._map)
+Check if layer is in the map => map.hasLayer(layer)
+
+

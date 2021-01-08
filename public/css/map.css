@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,700&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#mapView {
+  height: 100vh;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#mapView > div.leaflet-pane.leaflet-map-pane {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-sbs-divider {
+  background-color: #292b2c;
+  width: 4px !important;
+}
+
+.leaflet-sbs-range {
+  display: none !important;
+}
+
+/* Hamburger Menu */
+#mapView
+  > div.leaflet-control-container
+  > div.leaflet-top.leaflet-left
+  > div
+  > button {
+  width: 50px;
+  height: 50px;
+  background-color: #2d2926ff;
+  font-size: 1.9rem;
+  padding-top: 10px;
+  color: white;
+}
+
+#leftOrtoInfo {
+  position: absolute;
+  left: 5vw;
+  bottom: 1.5vh;
+}
+
+#rightOrtoInfo {
+  position: absolute;
+  right: 5vw;
+  bottom: 1.5vh;
+}
+
+#fullOrtoInfo {
+  position: absolute;
+  right: 5vw;
+  bottom: 1.5vh;
+}
+
+.infoOrtoStyle {
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 900;
+  letter-spacing: 0.3rem;
+  font-size: 2.3rem;
+  color: #e94b3cff;
+  text-shadow: 3px 3px 6px black;
+}
+
+/* #mapView > div.leaflet-control-container > div.leaflet-top.leaflet-right > div {
+  background: #2d2926ff !important;
+  color: white;
+} */
+
+#mapView
+  > div.leaflet-control-container
+  > div.leaflet-top.leaflet-right
+  > div
+  > a.leaflet-control-zoom-in,
+#mapView
+  > div.leaflet-control-container
+  > div.leaflet-top.leaflet-right
+  > div
+  > a.leaflet-control-zoom-out {
+  background: #2d2926ff !important;
+  color: white;
+  border-color: #2d2926ff;
+}
+/* CSS WorkAround to do not show tiles - Black Tiles Problem !! */
+.leaflet-tile-container img {
+  width: 256.5px !important;
+  height: 256.5px !important;
+}

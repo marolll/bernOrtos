@@ -1,0 +1,185 @@
+/* ***********SIDEBAR ************** */
+#sideBar {
+  display: flex;
+  flex-direction: column;
+  background-color: #2d2926ff;
+  padding: 0;
+  height: auto;
+  padding-bottom: 0;
+  max-height: 100vh;
+}
+
+/******* HEADER*********/
+#sideBarHeader {
+  flex: 3;
+  background-image: url("../../images/bern-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  padding-top: 15%;
+}
+
+#headers h4 {
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px black;
+}
+
+#divChangeContent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#changeContent {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20%;
+  width: 50%;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.15rem;
+  border: 3px solid white;
+}
+
+#changeContent:hover {
+  color: #e94b3cff;
+  border-color: #e94b3cff;
+}
+
+/********* MAIN **************/
+#sideBarMain {
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.selectOrtoHeader {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin: 0.8rem;
+  color: white;
+  font-size: 1.4rem;
+}
+.col > .btn-block {
+  font-weight: 900;
+  letter-spacing: 0.15rem;
+}
+
+#closeSidebar {
+  flex: 1;
+  padding-left: 0.5rem !important;
+  padding-right: 0 !important;
+  padding-top: 1rem;
+  font-size: 1.7rem;
+}
+
+#closeIcon {
+  font-size: 3rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+#closeIcon:hover {
+  border-radius: 38%;
+  cursor: pointer;
+  color: #e94b3cff;
+}
+
+#closeTextDown,
+#closeTextUp {
+  writing-mode: vertical-lr;
+  text-transform: lowercase;
+  color: white;
+}
+
+#attribution {
+  color: white;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+}
+#attribution > a {
+  color: #e94b3cff;
+  font-weight: bold;
+}
+
+/********* MEDIA QUERIES *************/
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .leaflet-sidebar {
+    width: 50%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .leaflet-sidebar {
+    width: 65%;
+    height: 100% !important;
+  }
+  #headers h4 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .selectOrtoHeader {
+    letter-spacing: 0.3rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .leaflet-sidebar {
+    max-width: 80%;
+    height: 100% !important;
+  }
+  #headers h4 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .selectOrtoHeader {
+    letter-spacing: 0.3rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaflet-sidebar {
+    max-width: 100%;
+    height: 100% !important;
+  }
+  #headers h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .selectOrtoHeader {
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+  }
+}
+
+/****** Classes that can be added with jQuery ******/
+.hide {
+  display: none;
+}
+
+.hideByIndex {
+  z-index: 0;
+}
+.active {
+  background-color: #e94b3cff !important;
+  color: white !important;
+  border: black !important;
+}
