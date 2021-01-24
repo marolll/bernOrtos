@@ -68,10 +68,15 @@ html {
   text-shadow: 3px 3px 6px black;
 }
 
-/* #mapView > div.leaflet-control-container > div.leaflet-top.leaflet-right > div {
-  background: #2d2926ff !important;
-  color: white;
-} */
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2001;
+  width: 3rem;
+  margin-top: -18px;
+  margin-left: -16px;
+}
 
 #mapView
   > div.leaflet-control-container
@@ -86,9 +91,18 @@ html {
   background: #2d2926ff !important;
   color: white;
   border-color: #2d2926ff;
+  font-weight: bold;
 }
 /* CSS WorkAround to do not show tiles - Black Tiles Problem !! */
 .leaflet-tile-container img {
   width: 256.5px !important;
   height: 256.5px !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: unset;
 }

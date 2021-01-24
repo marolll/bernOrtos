@@ -28,6 +28,9 @@ $(document).ready(() => {
   // Show Sidebar
   controlEasybutton = L.easyButton("fa-bars", function () {
     controlSidebar.toggle();
+    let sidebar = $("#sideBar");
+    sidebar.css({'display': 'unset', 'transition': 'ease'});
+ 
 
     // Hide years on mobile when sidebar is open
     if (isMobile()) {
@@ -69,4 +72,17 @@ $(document).ready(() => {
   ctlSideBySide = L.control
     .sideBySide(lyrOrtophotoLeft, lyrOrtophotoRight)
     .addTo(map);
+
+
+
+    lyrOrtophotoRight.on("loading", () => {
+      console.log("right loading")
+      $("#loading").addClass("show");
+    })
+
+    lyrOrtophotoRight.on("load", () => {
+      console.log("Right load")
+      $("#loading").addClass("hide");
+    })
+
 });
